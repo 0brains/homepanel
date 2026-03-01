@@ -1,0 +1,35 @@
+.sidebar {
+  background: var(--hp-sidebar-bg, var(--mantine-color-body));
+  border-right: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background: var(--hp-hover-overlay, rgba(255, 255, 255, 0.1));
+  }
+
+  &[data-active] {
+    &::before {
+      content: "";
+      position: absolute;
+      left: -16px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 24px;
+      border-radius: 0 4px 4px 0;
+      background: var(--hp-primary, var(--mantine-primary-color-filled));
+    }
+  }
+}

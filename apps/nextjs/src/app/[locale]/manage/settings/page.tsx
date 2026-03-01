@@ -10,13 +10,14 @@ import { DynamicBreadcrumb } from "~/components/navigation/dynamic-breadcrumb";
 import { AnalyticsSettings } from "./_components/analytics.settings";
 import { AppearanceSettingsForm } from "./_components/appearance-settings-form";
 import { BoardSettingsForm } from "./_components/board-settings-form";
+import { ThemeSettingsForm } from "./_components/theme-settings-form";
 import { CultureSettingsForm } from "./_components/culture-settings-form";
 import { SearchSettingsForm } from "./_components/search-settings-form";
 import { UserSettingsForm } from "./_components/user-settings-form";
 
 export async function generateMetadata() {
   const t = await getScopedI18n("management");
-  const metaTitle = `${t("metaTitle")} • Homarr`;
+  const metaTitle = `${t("metaTitle")} • HomePanel`;
 
   return {
     title: metaTitle,
@@ -50,6 +51,10 @@ export default async function SettingsPage() {
         <Stack>
           <Title order={2}>{tSettings("section.search.title")}</Title>
           <SearchSettingsForm defaultValues={serverSettings.search} />
+        </Stack>
+        <Stack>
+          <Title order={2}>HomePanel Theme</Title>
+          <ThemeSettingsForm />
         </Stack>
         <Stack>
           <Title order={2}>{tSettings("section.appearance.title")}</Title>

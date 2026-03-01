@@ -1,7 +1,18 @@
-import definition from "../../boards/(content)/(home)/_definition";
+import { AppShellMain, Stack, Text, Title } from "@mantine/core";
 
-const { generateMetadataAsync: generateMetadata, page } = definition;
+export const metadata = {
+  title: "HomePanel",
+};
 
-export default page;
-
-export { generateMetadata };
+export default function HomePanelPage() {
+  return (
+    <AppShellMain>
+      <Stack align="center" justify="center" h="100%">
+        <Title order={1}>HomePanel</Title>
+        <Text c="dimmed" size="lg">
+          Your smart home dashboard is ready. Widgets coming in Phase 2.
+        </Text>
+      </Stack>
+    </AppShellMain>
+  );
+}

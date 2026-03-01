@@ -40,22 +40,20 @@ const fontSans = Inter({
 
 // eslint-disable-next-line no-restricted-syntax
 export const generateMetadata = async (): Promise<Metadata> => ({
-  title: "Homarr",
+  title: "HomePanel",
   description:
-    "Simplify the management of your server with Homarr - a sleek, modern dashboard that puts all of your apps and services at your fingertips.",
+    "A tablet-first smart home dashboard for your homelab cluster.",
   openGraph: {
-    title: "Homarr Dashboard",
+    title: "HomePanel Dashboard",
     description:
-      "Simplify the management of your server with Homarr - a sleek, modern dashboard that puts all of your apps and services at your fingertips.",
-    url: "https://homarr.dev",
-    siteName: "Homarr Documentation",
+      "A tablet-first smart home dashboard for your homelab cluster.",
   },
   icons: {
     icon: "/logo/logo.png",
     apple: "/logo/logo.png",
   },
   appleWebApp: {
-    title: "Homarr",
+    title: "HomePanel",
     capable: true,
     startupImage: { url: "/logo/logo.png" },
     statusBarStyle: (await getCurrentColorSchemeAsync()) === "dark" ? "black-translucent" : "default",
